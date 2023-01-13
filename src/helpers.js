@@ -5,9 +5,23 @@ function choice(arr) {
   }
 
   function remove(arr, obj) {
-  arr.includes(obj)? arr.splice(arr.indexOf(obj), 1)
-  : null
-  console.log(arr)
+    let index = arr.indexOf(obj)
+    if (index > -1) {
+      arr.splice(index, 1)
+      return arr
+    }
+    else {
+      return null
+    }
+
+
+
+
+    // return (arr.map((obj) => {
+    //   return (arr.includes(obj)? (arr.splice(arr.indexOf(obj), 1),console.log(arr)) : null
+  //     )
+  //   })
+  // )
   }
 // for (let i = 0; i < arr.length; i++) {
 //   if (arr[i] === obj) {
